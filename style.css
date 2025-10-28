@@ -2,3 +2,16 @@ html {
   height: 100%;
   width: 100%;
 }
+.post{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  display: block;
+
+}
+.post h3{
+  color: red;
+}
+.post p{
+  color: green;
+}

@@ -75,7 +75,20 @@
   })
 
   cw2.addEventListener("click", function () {
-    //TODO
+    answer.textContent = "Loading...";
+    setTimeout(() => {  
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(array => {
+        console.log(array)
+        answer.innerHTML = "<div class='post'>" + array.map(item => `<h3>${item.title}</h3><p>${item.body}</p>`).join('') + "</div>";
+      })
+      }, 500);
   })
 
   cw3.addEventListener("click", function () {
