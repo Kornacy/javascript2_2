@@ -86,6 +86,8 @@
       .then(response => response.json())
       .then(array => {
         console.log(array)
+        console.log(array[1])
+        console.log(array[1].title)
         answer.innerHTML = array.map(item => 
           "<div class='post'>" + `<h3>${item.title}</h3><p>${item.body}</p>`+ "</div>").join('');
       })
