@@ -7,7 +7,9 @@ html {
   margin: 5px;
   padding: 5px;
   display: block;
-
+  border: 1px solid black;
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 .post h3{
   color: red;
@@ -15,3 +17,4 @@ html {
 .post p{
   color: green;
 }
+

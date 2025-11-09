@@ -86,7 +86,8 @@
       .then(response => response.json())
       .then(array => {
         console.log(array)
-        answer.innerHTML = "<div class='post'>" + array.map(item => `<h3>${item.title}</h3><p>${item.body}</p>`).join('') + "</div>";
+        answer.innerHTML = array.map(item => 
+          "<div class='post'>" + `<h3>${item.title}</h3><p>${item.body}</p>`+ "</div>").join('');
       })
       }, 500);
   })
