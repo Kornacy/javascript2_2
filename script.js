@@ -75,7 +75,11 @@
   })
 
   cw2.addEventListener("click", function () {
-    answer.textContent = "Loading...";
+    //answer.textContent ="";
+    const loading = document.createElement("div");
+    loading.id = "load";
+    loading.innerHTML = "<p>Loading...</p>";
+    document.body.appendChild(loading);
     setTimeout(() => {  
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'GET',
@@ -88,10 +92,12 @@
         console.log(array)
         console.log(array[1])
         console.log(array[1].title)
+        document.getElementById("load").remove();
         answer.innerHTML = array.map(item => 
           "<div class='post'>" + `<h3>${item.title}</h3><p>${item.body}</p>`+ "</div>").join('');
       })
       }, 500);
+      
   })
 
   cw3.addEventListener("click", function () {

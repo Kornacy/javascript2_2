@@ -17,4 +17,24 @@ html {
 .post p{
   color: green;
 }
-
+#load{
+  display: flex;
+  position: fixed;
+  text-align: center;
+  top: 5vh;
+  left: 5vw;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  font-size: 4rem;
+  border-radius: 100px;
+  background: rgba(0,0,255,0.45);
+}
+#load p{
+  border-radius: 100px;
+  background: rgba(0,0,255,0.5);
+  padding: 20px;
+  color: white;
+  text-decoration: solid;
+}
